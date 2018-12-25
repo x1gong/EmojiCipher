@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="emoji,cipher,ciphertext,AES,encrpyt,decrypt,encryption,decryption">
+    <title>关于网站 -- 表情符号加密器</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+
+        body {
+          padding-top: 5rem;
+        }
+
+        .starter-template {
+          padding: 3rem 1.5rem;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/zh-CN">Emoji Cipher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/zh-CN">首页</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/zh-CN/about">关于<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="lan_drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">语言</a>
+                <div class="dropdown-menu" aria-labelledby="lan_drop">
+                    <a class="dropdown-item" href="/about">English</a>
+                    <a class="dropdown-item" href="/zh-CN/about">简体中文</a>
+                    <a class="dropdown-item" href="/zh-TW/about">繁體中文</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+
+        <h1>关于网站</h1><br>
+
+        <p class="lead">
+            Emoji Cipher 是一个在线文字加密小程序. 通过这个网站，你可以把任何语言的文字加密成表情符号，以达到信息传输
+            安全的目的。
+        </p>
+
+        <p class="lead">
+            在每次执行加密以前，Emoji Cipher会随机生成一个密钥(key)，并把这个密钥应用到
+            <a href="https://zh.wikipedia.org/zh-cn/%E9%AB%98%E7%BA%A7%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86"
+               target="_blank">AES 加密算法</a>从而得到密文字节码。此程序会把密钥和密文转换成表情符号返回给用户。对于同一段
+            文字，不同的密钥会生成不同的密文。所以当用户重复加密同一段文字时，会看到不同的表情符号组合。
+        </p>
+
+        <p class="lead">
+            本网站不会储存任何用户信息（文字输入/输出，IP地址等）。
+        </p>
+
+        <p class="lead">
+            本程序开源，可以在<a href="http://github.com/x1gong" target="_blank">Github</a>找到。
+        </p>
+
+
+    </div>
+
+    <footer class="container" style="text-align:center">
+        <p>&copy; 2018 Site Created by Xiangyi Gong &middot;
+            <a href="http://github.com/x1gong" target="_blank">source</a></p>
+    </footer>
+
+</main>
+
+
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="/js/emoji-cipher.js"></script>
+</body>
+</html>

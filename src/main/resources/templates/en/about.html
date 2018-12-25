@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="emoji,cipher,ciphertext,AES,encrpyt,decrypt,encryption,decryption">
+    <title>Emoji Chipher -- Encrpyt Message into Emojis </title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+
+        body {
+          padding-top: 5rem;
+        }
+
+        .starter-template {
+          padding: 3rem 1.5rem;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Emoji Cipher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="lan_drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                <div class="dropdown-menu" aria-labelledby="lan_drop">
+                    <a class="dropdown-item" href="/about">English</a>
+                    <a class="dropdown-item" href="/zh-CN/about">简体中文</a>
+                    <a class="dropdown-item" href="/zh-TW/about">繁體中文</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+
+        <h1>About Emoji Cipher</h1><br>
+        <p class="lead">
+            Emoji Cipher is an online text encryption program. Through this site, you can encode any texts into
+            emoji symbols for security purposes such as encryption, obfuscation etc. If you are new to text encryption,
+            you can also try it for fun.
+        </p>
+
+        <p class="lead">
+            When a user tries to encrypt a piece of text, the program generates a random key and applies the key into
+            the <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">AES
+            Encryption Algorithm</a> to get the encrypted ciphertext. Then the key and the ciphertext are combined
+            together and translated to emoji symbols. For the same text input, different keys would outcome different
+            ciphertexts. Therefore users would see different results when they try to encrypt the same text repeatedly.
+        </p>
+
+        <p class="lead">
+            This site won't store any of your personal data such as text input/output, ip address etc.
+        </p>
+
+        <p class="lead">
+            This program is open-source and can be found in <a href="http://github.com/x1gong" target="_blank">Github</a>.
+        </p>
+
+
+    </div>
+
+    <footer class="container" style="text-align:center">
+        <p>&copy; 2018 Site Created by Xiangyi Gong &middot;
+            <a href="http://github.com/x1gong" target="_blank">source</a></p>
+    </footer>
+
+
+</main>
+
+
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="/js/emoji-cipher.js"></script>
+</body>
+</html>

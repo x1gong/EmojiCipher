@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="表情,加密,表情符号,表情包,AES,混淆,文字加密,翻译">
+    <title>表情符号加密器 -- Emoji Cipher</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+
+        body {
+          padding-top: 5rem;
+        }
+
+        .starter-template {
+          padding: 3rem 1.5rem;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/zh-CN">Emoji Cipher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/zh-CN">首页<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/zh-CN/about">关于</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="lan_drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">语言</a>
+                <div class="dropdown-menu" aria-labelledby="lan_drop">
+                    <a class="dropdown-item" href="/">English</a>
+                    <a class="dropdown-item" href="/zh-CN">简体中文</a>
+                    <a class="dropdown-item" href="/zh-TW">繁體中文</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+
+        <h1>表情符号加密器</h1><br>
+        <p class="lead">
+            这是一个文字加密小程序<br>
+            你可以把任何语言的文字加密成表情符号<br>
+            也可以把加密的表情解密回原来的文字
+        </p>
+
+        😛📿👂😘🍮📞🤠🚪🎮🍦🤛📕🚛🎥👆🚍👛👀🤦👿🍣🌠🥊🍁🥉💯🍔🧢🕛😑🚣💒🚙
+        <br>
+
+    </div>
+
+
+
+    <label for="text_input" style="text-align: left">要加密的文字 </label>
+    <button type="button" class="btn btn-link btn-sm" id="text_copy">复制到剪贴板</button>
+    <textarea class="form-control" id="text_input" rows="10"></textarea>
+
+
+    <div class="row" style="text-align: left; padding: 2rem 1rem">
+        <div class="col">
+            <button type="button" class="btn btn-outline-dark" id="encrypt_btn">
+                加密 <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="col" style="text-align: center">
+            <button type="button" class="btn btn-outline-secondary" id="clear_btn">
+                清空 <i class="fa fa-eraser" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="col" style="text-align: right">
+            <button type="button" class="btn btn-outline-dark" id="decrypt_btn">
+                解密 <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <label for="emoji_output">加密后的表情</label>
+    <button type="button" class="btn btn-link btn-sm" id="emoji_copy">复制到剪贴板</button>
+    <br>
+    <textarea class="form-control" id="emoji_output" rows="10"></textarea>
+    <div class="starter-template">
+        <p>
+            注：如果重复加密同一段文字，你会看到不同的加密表情，但是所有的加密结果都能够解密回相同的文字
+        </p>
+    </div>
+
+
+    <div class="alert alert-success alert-dismissible collapse fixed-bottom" role="alert" id="success_copy_alert">
+        复制<strong>成功</strong>!
+        <button type="button" class="close" id="success_close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible collapse fixed-bottom" role="alert" id="warning_alert">
+        <span id="warning_text"></span>
+        <button type="button" class="close" id="fail_close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="alert alert-danger alert-dismissible collapse fixed-bottom" role="alert" id="error_alert">
+        <span id="error_text"></span>
+        <button type="button" class="close" id="error_close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <footer class="container" style="text-align:center">
+        <p>&copy; 2018 Site Created by Xiangyi Gong &middot;
+            <a href="http://github.com/x1gong" target="_blank">source</a></p>
+    </footer>
+
+</main>
+
+
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="/js/emoji-cipher-cn.js"></script>
+</body>
+</html>

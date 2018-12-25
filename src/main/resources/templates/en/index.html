@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="emoji,cipher,ciphertext,AES,encrpyt,decrypt,encryption,decryption">
+    <title>Emoji Cipher -- Encrypt Message into Emojis </title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+
+        body {
+          padding-top: 5rem;
+        }
+
+        .starter-template {
+          padding: 3rem 1.5rem;
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Emoji Cipher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="lan_drop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                <div class="dropdown-menu" aria-labelledby="lan_drop">
+                    <a class="dropdown-item" href="/">English</a>
+                    <a class="dropdown-item" href="/zh-CN">简体中文</a>
+                    <a class="dropdown-item" href="/zh-TW">繁體中文</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+
+        <h1>Emoji Cipher</h1><br>
+        <p class="lead">
+            A simple text encryption program<br>
+            You can encrypt text in any language into emoji ciphertext<br>
+            You can also decrypt emojis back to the readable text
+        </p>
+
+        🤾👶🤞🎳🙊👌🗝🚋👢🍦🕊🥑🏕🧦🕍👭😧🏴🍗🙄🐘🚉🎣📲🧐🛎🐼🍌🙄🎻🐠🥠🏄🗜😋
+        <br>
+
+    </div>
+
+
+
+    <label for="text_input" style="text-align: left">Text to Encrypt </label>
+    <button type="button" class="btn btn-link btn-sm" id="text_copy">copy to clipboard</button>
+    <textarea class="form-control" id="text_input" rows="10"></textarea>
+
+
+    <div class="row" style="text-align: left; padding: 2rem 1rem">
+        <div class="col">
+            <button type="button" class="btn btn-outline-dark" id="encrypt_btn">
+                Encrypt <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="col" style="text-align: center">
+            <button type="button" class="btn btn-outline-secondary" id="clear_btn">
+                &nbsp;Clear&nbsp;&nbsp; <i class="fa fa-eraser" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="col" style="text-align: right">
+            <button type="button" class="btn btn-outline-dark" id="decrypt_btn">
+                Decrypt <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <label for="emoji_output"> Emoji Ciphertext </label>
+    <button type="button" class="btn btn-link btn-sm" id="emoji_copy">copy to clipboard</button>
+    <br>
+    <textarea class="form-control" id="emoji_output" rows="10"></textarea>
+    <div class="starter-template">
+        <p>
+            Note: if you encrypt the same text for multiple times, you would see different emoji cipher texts but they can all be decoded back to the original text.
+        </p>
+    </div>
+
+
+    <div class="alert alert-success alert-dismissible collapse fixed-bottom" role="alert" id="success_copy_alert">
+        The text is <strong>succesfully</strong> copied!
+        <button type="button" class="close" id="success_close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible collapse fixed-bottom" role="alert" id="warning_alert">
+        <span id="warning_text"></span>
+        <button type="button" class="close" id="fail_close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="alert alert-danger alert-dismissible collapse fixed-bottom" role="alert" id="error_alert">
+        <span id="error_text"></span>
+        <button type="button" class="close" id="error_close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
+    <footer class="container" style="text-align:center">
+        <p>&copy; 2018 Site Created by Xiangyi Gong &middot;
+            <a href="http://github.com/x1gong" target="_blank">source</a></p>
+    </footer>
+
+</main>
+
+
+
+
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="/js/emoji-cipher.js"></script>
+</body>
+</html>
